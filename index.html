@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="bootcamp_Function.js" ></script>
+    <script src="alpine-bootcampwidget.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
+
+
+</head>
+<body>
+<div class="Widgets" x-data="Widget">
+        <!------------------------------------------Greeting function----------------------------------------->
+        <div class="WidgetBtn" x-show="WidgetBtn1">
+            <button x-show="BtnO1" x-on:click="widget1= true,BtnO1= false, BtnC1= true,
+                                               WidgetBtn2=false,WidgetBtn3=false,
+                                               WidgetBtn4 =false
+                                 ">GREET
+            </button>
+            <button x-show="BtnC1" x-on:click="BtnC1= false,BtnO1= true,widget1= false,
+                                               WidgetBtn2= true,WidgetBtn3=true,
+                                               WidgetBtn4 =true
+                                 ">Close
+            </button>
+        </div>
+        <div class="Greeting" x-data="greetWidget" x-show="widget1">
+            <h1>Greeting widget</h1>
+            <div x-show="Message.length > 0" class="Greeting_Message" x-text="Message"></div>
+    
+            <label for="name">Pleas enter your name</label>
+            <input type="text" x-model="name" id="name" placeholder="Enter name">
+    
+            <button x-on:click="greetMe">Greet</button>
+        </div>
+        <!--------------------------------------------Transport Fee------------------------------------------------>
+        <div class="WidgetBtn" x-show="WidgetBtn2">
+            <button x-show="BtnO2" x-on:click="widget2= true,BtnO2= false, BtnC2= true,
+                                               WidgetBtn1=false,WidgetBtn3=false,
+                                               WidgetBtn4 =false
+                                 ">Transport Fee
+            </button>
+            <button x-show="BtnC2" x-on:click="BtnC2= false,BtnO2= true,widget2= false,
+                                               WidgetBtn1= true,WidgetBtn3=true,
+                                               WidgetBtn4 =true
+                                 ">Close
+            </button>
+        </div>
+        <div class="Transport" x-data="transportWidget" x-show="widget2">
+            <h1>Transport Fee widget</h1>
+            <div>
+                <label>
+                    <h4>SHIFT AVAILABLE</h4> 
+                </label>
+                <div class="shiftlist">
+                    <div>
+                        <input type="radio" x-on:click="FeeAmount, shift1()" name="shift">Morning
+                    </div>
+                    <div>
+                        <input type="radio" x-on:click="FeeAmount, shift2()" name="shift">Afternoon
+                    </div>
+                    <di>
+                        <input type="radio" x-on:click="FeeAmount, shift3()" name="shift">Nightshift
+                    </di>
+                </div>
+            </div>
+            <div class="TransportFeeMessage" x-text="Fee_Message"></div>
+        </div>
+            <!---------------------------------------WORD GAME-------------------------------------------------------->
+           <div class="WidgetBtn" x-show="WidgetBtn3">
+            <button x-show="BtnO3" x-on:click="widget3= true,BtnO3= false, BtnC3= true,
+                                               WidgetBtn1=false,WidgetBtn2=false,
+                                               WidgetBtn4 =false
+                                 ">WORD GAME
+            </button>
+            <button x-show="BtnC3" x-on:click="BtnC3= false,BtnO3= true,widget3= false,
+                                               WidgetBtn1= true,WidgetBtn2=true,
+                                               WidgetBtn4 =true
+                                 ">Close
+            </button>
+           </div>
+
+            <div class="Word_Game" x-data="wordgameWidget" x-show="widget3">
+                <h1>Word Game widget</h1>
+                <label for="Sentence">Write the sentence:</label>
+                <div>
+                    <input class="sent_input" type="text" x-model="Sentence" id="Sentence" placeholder="Write Sentence">
+                    <button x-on:click="longest_Word">
+                    Play the game!!
+                    </button>
+                </div>
+                <div class="Word_game_message" x-show="character > 0">
+                    <ol>
+                        <li>
+                            LongWord:<span x-text="longestWord"></span>
+                        </li>
+                        <li>
+                            ShortWord:<span x-text="shortestWord"></span>
+                        </li>
+                        <li>
+                            Character:<span x-text="character"></span>
+                        </li>
+                    </ol>
+    
+                </div>
+    
+            </div>
+            <!------------------------------------------------------Total phone bill------------------------------->
+            <div class="WidgetBtn" x-show="WidgetBtn4">
+            <button x-show="BtnO4" x-on:click="widget4= true,BtnO4= false, BtnC4= true,
+                                               WidgetBtn1=false,WidgetBtn2=false,
+                                               WidgetBtn3 =false
+                                 ">Total phone bill
+            </button>
+            <button x-show="BtnC4" x-on:click="BtnC4= false,BtnO4= true,widget4= false,
+                                               WidgetBtn1= true,WidgetBtn2=true,
+                                               WidgetBtn3 =true
+                                 ">Close
+            </button>
+            </div>
+
+            <div class="Expensive_items" x-data="TotalphonebillWidget" x-show="widget4">
+                <h1>Total phone bill widget</h1>
+                <div class="BillList" x-show="BillList">
+                    <h5 class="Billinglist">The cost:</h5>
+                    <p>
+                        1. R2.75 per call.<br>
+                        2. R0.65 per sms.
+                    </p>
+                </div>
+                <div class="Total_Bill_Message" x-show="BillsMessage > 0">
+                    R<spa x-text="BillsMessage"></spa>
+                </div>
+                <label for="phoneBill">Bills</label>
+                <input type="text" x-model="phoneBill" id="phoneBill" placeholder="Enter the Bills" >
+                <button x-on:click="Total_phonebill(), BillList= false">Calculater</button>
+    
+            </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/*-----------widget--------------*/
+body{
+    background-image: url("widget.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.WidgetBtn{
+    margin: 1em 0 -1em 0;
+    margin-bottom: 1em;
+}
+/*----------Greetiing-------*/
+.Greeting_Message {
+    padding: 1em;
+    background-color: yellowgreen;
+    margin: 0 0 1em 0;
+    border-radius: 0.5em;
+}
+
+/*---Transport Fee-----*/
+h4 {
+    margin: 0em 0em 0em 1em;
+}
+.shiftlist {
+    margin: 0em 0em 1em 0;
+}
+.TransportFeeMessage {
+    background-color: red;
+    border-radius: 0.3em;
+    width: 15%;
+    margin: 0.5em 0 0.5em 3em;
+}
+/*----Word Game------*/
+.Sentence {
+    vertical-align: bottom;
+}
+.sent_input{
+    width: 30%;
+}
+span {
+    margin: 0em 0em 0em 0.3em;
+}
+/*-------Total phone bill----------*/
+.Billinglist{
+    margin: 0 0 -1em 0;
+}
+.Total_Bill_Message{
+    background-color: aqua;
+}
+.four {
+    width: 40px;
+}
