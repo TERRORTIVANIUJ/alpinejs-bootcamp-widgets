@@ -1,6 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('Widget', function(){
         return { 
+            showWelcome: true,
             widget1: false,
             widget2: false,
             widget3: false,

@@ -16,16 +16,17 @@
 </head>
 <body>
 <div class="Widgets" x-data="Widget">
+    <h1 class="WELCOME" x-show="showWelcome"> Welcome to Bootcamp Widget</h1>
         <!------------------------------------------Greeting function----------------------------------------->
         <div class="WidgetBtn" x-show="WidgetBtn1">
             <button x-show="BtnO1" x-on:click="widget1= true,BtnO1= false, BtnC1= true,
-                                               WidgetBtn2=false,WidgetBtn3=false,
-                                               WidgetBtn4 =false
+                                               showWelcome= false,WidgetBtn2=false,
+                                               WidgetBtn3=false,WidgetBtn4 =false
                                  ">GREET
             </button>
             <button x-show="BtnC1" x-on:click="BtnC1= false,BtnO1= true,widget1= false,
-                                               WidgetBtn2= true,WidgetBtn3=true,
-                                               WidgetBtn4 =true
+                                               showWelcome= true,WidgetBtn2= true,
+                                               WidgetBtn3=true,WidgetBtn4 =true
                                  ">Close
             </button>
         </div>
@@ -43,13 +44,13 @@
         <!--------------------------------------------Transport Fee------------------------------------------------>
         <div class="WidgetBtn" x-show="WidgetBtn2">
             <button x-show="BtnO2" x-on:click="widget2= true,BtnO2= false, BtnC2= true,
-                                               WidgetBtn1=false,WidgetBtn3=false,
-                                               WidgetBtn4 =false
+                                               showWelcome= false,WidgetBtn1=false,
+                                               WidgetBtn3=false,WidgetBtn4 =false
                                  ">Transport Fee
             </button>
             <button x-show="BtnC2" x-on:click="BtnC2= false,BtnO2= true,widget2= false,
-                                               WidgetBtn1= true,WidgetBtn3=true,
-                                               WidgetBtn4 =true
+                                               showWelcome= true,WidgetBtn1= true,
+                                               WidgetBtn3=true,WidgetBtn4 =true
                                  ">Close
             </button>
         </div>
@@ -78,13 +79,13 @@
             <!---------------------------------------WORD GAME-------------------------------------------------------->
            <div class="WidgetBtn" x-show="WidgetBtn3">
             <button x-show="BtnO3" x-on:click="widget3= true,BtnO3= false, BtnC3= true,
-                                               WidgetBtn1=false,WidgetBtn2=false,
-                                               WidgetBtn4 =false
+                                               showWelcome= false,WidgetBtn1=false,
+                                               WidgetBtn2=false,WidgetBtn4 =false
                                  ">WORD GAME
             </button>
             <button x-show="BtnC3" x-on:click="BtnC3= false,BtnO3= true,widget3= false,
-                                               WidgetBtn1= true,WidgetBtn2=true,
-                                               WidgetBtn4 =true
+                                               showWelcome= true,WidgetBtn1= true,
+                                               WidgetBtn2=true,WidgetBtn4 =true
                                  ">Close
             </button>
            </div>
@@ -120,13 +121,13 @@
             <!------------------------------------------------------Total phone bill------------------------------->
             <div class="WidgetBtn" x-show="WidgetBtn4">
             <button x-show="BtnO4" x-on:click="widget4= true,BtnO4= false, BtnC4= true,
-                                               WidgetBtn1=false,WidgetBtn2=false,
-                                               WidgetBtn3 =false
+                                               showWelcome= false,WidgetBtn1=false,
+                                               WidgetBtn2=false,WidgetBtn3 =false
                                  ">Total phone bill
             </button>
             <button x-show="BtnC4" x-on:click="BtnC4= false,BtnO4= true,widget4= false,
-                                               WidgetBtn1= true,WidgetBtn2=true,
-                                               WidgetBtn3 =true
+                                               showWelcome= true,WidgetBtn1= true,
+                                               WidgetBtn2=true, WidgetBtn3 =true
                                  ">Close
             </button>
             </div>

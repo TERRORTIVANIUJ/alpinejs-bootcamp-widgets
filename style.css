@@ -8,6 +8,9 @@ body{
     margin: 1em 0 -1em 0;
     margin-bottom: 1em;
 }
+.WELCOME{
+    text-align: center;
+}
 /*----------Greetiing-------*/
 .Greeting_Message {
     padding: 1em;
