@@ -31,6 +31,8 @@
         </div>
         <div class="Greeting" x-data="greetWidget" x-show="widget1">
             <h1>Greeting widget</h1>
+            <h6>This widget takes a person's entered name and when they press the greet button. 
+                The widget will print "Hellow" along with the name you input.</h6>
             <div x-show="Message.length > 0" class="Greeting_Message" x-text="Message"></div>
     
             <label for="name">Pleas enter your name</label>
@@ -53,6 +55,8 @@
         </div>
         <div class="Transport" x-data="transportWidget" x-show="widget2">
             <h1>Transport Fee widget</h1>
+            <h6>This widget allows users to see how much they will pay for transportation 
+                to work when they click next to the name of the shift they are attending that day.</h6>
             <div>
                 <label>
                     <h4>SHIFT AVAILABLE</h4> 
@@ -87,6 +91,9 @@
 
             <div class="Word_Game" x-data="wordgameWidget" x-show="widget3">
                 <h1>Word Game widget</h1>
+                <h6>When a user enters a sentence into the widget's input box and clicks the "play the game" button, 
+                    the widget will display the longest and shortest words in the entered sentence. 
+                    Additionally, the widget calculates the letter in the statement.</h6>
                 <label for="Sentence">Write the sentence:</label>
                 <div>
                     <input class="sent_input" type="text" x-model="Sentence" id="Sentence" placeholder="Write Sentence">
@@ -126,6 +133,8 @@
 
             <div class="Expensive_items" x-data="TotalphonebillWidget" x-show="widget4">
                 <h1>Total phone bill widget</h1>
+                <h6> The widget that calculates how much someone will pay or how much 
+                    they'll need to spend on a given number of calls and SMS messages</h6>
                 <div class="BillList" x-show="BillList">
                     <h5 class="Billinglist">The cost:</h5>
                     <p>
