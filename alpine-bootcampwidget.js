@@ -40,7 +40,7 @@ document.addEventListener('alpine:init', () => {
         
             setTimeout(() => {
                   this.Message = '';
-              }, 3000);
+              }, 5000);
           }
         }
     });
@@ -74,7 +74,7 @@ document.addEventListener('alpine:init', () => {
                   this.Fee_Message= '';
                   this.shift= '';
                    radio.checked = false;
-              }, 3000);
+              }, 5000);
           }
         }
     });
@@ -107,7 +107,7 @@ document.addEventListener('alpine:init', () => {
             setTimeout(() => {
                 this.Sentence= '';
                 this.character= 0;
-              }, 3000);
+              }, 5000);
           }
         }
     });
@@ -130,7 +130,7 @@ document.addEventListener('alpine:init', () => {
                 this.phoneBill= '';
                 this.BillsMessage= 0;
                 this.BillList= true;
-              }, 3000);
+              }, 5000);
           }
         }
     });
